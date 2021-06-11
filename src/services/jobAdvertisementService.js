@@ -2,6 +2,8 @@ import axios from "axios";
 
 export default class JobAdvertisementService{
     getJobAdvertisement(){
-        return axios.get("http://localhost:8080/api/jobAdvertisements/getall")
+        let result = axios.get("http://localhost:8080/api/jobadvertisements/getall");
+        console.log(result);
+        return result;
     }
 }

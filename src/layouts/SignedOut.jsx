@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ResumeAdd = () => {
+const SignedOut = () => {
     return (
         <div>
-        {/*    soon    */}
+
         </div>
     );
 };
 
-export default ResumeAdd;
+export default SignedOut;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ResumeAdd = () => {
+const SignedIn = () => {
     return (
         <div>
-        {/*    soon    */}
+
         </div>
     );
 };
 
-export default ResumeAdd;
+export default SignedIn;
