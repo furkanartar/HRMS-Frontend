@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export default class JobSeekerService{
-    getAll(){
+export default class WayOfWorkingService {
+    getAll() {
         return axios.get("http://localhost:8080/api/wayofworkings/getAll")
     }
 }

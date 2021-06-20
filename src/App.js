@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "reactstrap";
 import Navi from "./components/Navi";
 import JobAdvertisementList from "./pages/JobAdvertisementList.jsx";
+import ResumeAdd from "./pages/JobAdvertisementAdd.jsx"
 import JobPositionList from './pages/JobPositionList';
 import JobAdvertisementService from "./services/jobAdvertisementService.js";
 import React, { Component } from 'react'
@@ -34,7 +35,7 @@ export default class App extends Component {
         }))
     } else {
       jobAdvertisementService
-        .getJobAdvertisements()
+        .getAllByActive()
         .then(response => this.setState({
           jobAdvertisements: response.data
         }))
@@ -57,17 +58,15 @@ export default class App extends Component {
 
             <Col xs="9">
               <Switch>
-
                 <Route exact path="/" render={props => (
                   <JobAdvertisementList
                     {...props}
                     jobAdvertisements={this.state.jobAdvertisements}
                     currentJobPosition={this.state.currentJobPosition} />
                 )} />
+                <Route exact path="/1" component={ResumeAdd} />
                 <Route component={NotFound} />
               </Switch>
-
-
             </Col>
           </Row>
         </Container>
@@ -75,4 +74,3 @@ export default class App extends Component {
     )
   }
 }
-
